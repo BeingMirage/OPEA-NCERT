@@ -1,0 +1,51 @@
+# Requirements for OPEA-based NCERT Doubt-Solver
+# OPEA + Vector DB + Embeddings + LLM Integration
+
+# ===== CORE FRAMEWORK =====
+# LangChain - composable chains (OPEA uses LangChain patterns)
+langchain==0.1.14
+langchain-community==0.0.30
+
+# ===== VECTOR DATABASE =====
+# ChromaDB client - lightweight vector storage
+chromadb==0.4.24
+
+# ===== EMBEDDINGS =====
+# sentence-transformers - multilingual embedding models
+sentence-transformers==2.5.0
+huggingface-hub==0.20.3
+
+# ===== LLM INTEGRATION =====
+# For using HuggingFace models
+transformers==4.36.2
+torch==2.1.2
+
+# For OpenAI API (optional, if you want to use GPT)
+openai==1.3.9
+
+# ===== TEXT PROCESSING =====
+# Language detection
+langdetect==1.0.9
+nltk==3.8.1
+
+# Text chunking and manipulation (not needed, langchain includes this)
+# ===== UTILITIES =====
+python-dotenv==1.0.0
+pydantic==2.5.0
+numpy==1.26.4
+pandas==2.1.3
+
+# ===== API FRAMEWORKS (for microservices) =====
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# ===== LOGGING & MONITORING =====
+loguru==0.7.2
+
+# ===== TESTING & DEVELOPMENT =====
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Note: Extraction tools (unstructured, tesseract, etc.) are not needed for RAG pipeline
+# They were used to generate chunks.jsonl files which are already extracted
+# If you need to re-extract PDFs, install from requirements_extraction.txt
