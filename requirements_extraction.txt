@@ -1,0 +1,38 @@
+requirements_extraction.txt
+
+
+ Python + core numeric
+python==3.10.*
+
+# pinned numpy that works with Unstructured 0.12.6 and PyTorch 2.2.x
+numpy==1.26.4
+
+# Unstructured + inference/ocr helpers
+unstructured==0.12.6
+unstructured-inference==1.1.2
+unstructured-pytesseract==0.1.5
+
+# OCR and PDF helpers
+pytesseract==0.3.10
+pdf2image==1.16.3
+pdfplumber==0.9.0
+pypdf==3.16.0
+pikepdf==5.3.0
+
+# Table extraction (uses Poppler / system tools)
+camelot-py==0.10.1
+
+# Image dependencies (HEIF support + OpenCV)
+pillow==9.5.0
+pillow-heif==0.15.0
+opencv-python==4.12.0.88
+
+# Utilities & compatibility
+python-magic-bin==0.4.14       # Windows-friendly magic
+nltk==3.8.1
+certifi==2024.2.2
+typing-extensions==4.9.0
+tqdm==4.66.2
+pyyaml==6.0.1
+langdetect==1.0.9
+ftfy==6.1.1
